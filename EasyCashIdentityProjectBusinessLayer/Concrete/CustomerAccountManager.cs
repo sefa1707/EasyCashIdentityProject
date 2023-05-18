@@ -25,12 +25,12 @@ namespace EasyCashIdentityProjectBusinessLayer.Concrete
 
         public CustomerAccount TGetByID(int id)
         {
-           _customerAccountDal.GetByID(id);
+           return _customerAccountDal.GetByID(id);
         }
 
         public List<CustomerAccount> TGetList()
         {
-            _customerAccountDal.GetList();
+            return _customerAccountDal.GetList();
         }
 
         public void TInsert(CustomerAccount t)

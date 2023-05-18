@@ -21,4 +21,3 @@ namespace EasyCashIdentityProjectEntityLayer.Concrete
     }
 }
 
-/*ID- İşlem türü(gelen, giden, ödeme) - miktar - tarih - alıcı - gönderici

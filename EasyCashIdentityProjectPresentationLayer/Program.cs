@@ -1,7 +1,12 @@
+using EasyCashIdentityProjectDataAccessLayer.Concrete;
+using EasyCashIdentityProjectEntityLayer.Concrete;
+
 var builder = WebApplication.CreateBuilder(args);
 
 // Add services to the container.
 builder.Services.AddControllersWithViews();
+builder.Services.AddDbContext<Context>();
+builder.Services.AddIdentity<AppUser, Approle>().AddEntityFrameworkStores<Context>();
 
 var app = builder.Build();
 
@@ -17,6 +22,7 @@ app.UseHttpsRedirection();
 app.UseStaticFiles();
 
 app.UseRouting();
+app.UseAuthentication();
 
 app.UseAuthorization();
 
